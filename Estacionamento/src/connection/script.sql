@@ -8,12 +8,12 @@
  * Created: 06/10/2022
  */
 
-CREAT DATABASE IF NOT EXISTS estacionamento;
+CREATE DATABASE IF NOT EXISTS estacionamento;
 USE estacionamento;
 
-CREAT TABLE vaga {
+CREATE TABLE vaga (
 idVaga  int NOT NULL AUTO_INCREMENT,
 numero  int NOT NULL,
 rua     varchar(50) NOT NULL,
 obliqua boolean NOT NULL,
-PRIMARY KEY (idVaga)};
+PRIMARY KEY (idVaga));

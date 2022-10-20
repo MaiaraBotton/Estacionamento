@@ -1,5 +1,5 @@
 
-package modeldao;
+package model.dao;
 
 import model.bean.Vaga;
 import connection.ConnectionFactory;
