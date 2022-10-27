@@ -17,3 +17,13 @@ numero  int NOT NULL,
 rua     varchar(50) NOT NULL,
 obliqua boolean NOT NULL,
 PRIMARY KEY (idVaga));
+
+CREATE TABLE motorista (
+idMotorista  int NOT NULL AUTO_INCREMENT,
+cpf  int NOT NULL,
+genero  boolean NOT NULL,
+rg  int NOT NULL,
+celular  int NOT NULL,
+email    varchar(100) NOT NULL,
+senha     varchar(50) NOT NULL,
+PRIMARY KEY (idMotorista));
