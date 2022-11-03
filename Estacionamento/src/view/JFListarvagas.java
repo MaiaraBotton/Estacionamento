@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package view;
+import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import model.dao.VagaDAO;
 import model.bean.Vaga;
@@ -33,9 +34,9 @@ public class JFListarvagas extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTVaga = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
+        jBTNCadastrar = new javax.swing.JButton();
+        jBTNEditar = new javax.swing.JButton();
+        jBTNExcluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -68,19 +69,19 @@ public class JFListarvagas extends javax.swing.JFrame {
         });
         jScrollPane1.setViewportView(jTVaga);
 
-        jButton1.setText("Cadastrar Vaga");
+        jBTNCadastrar.setText("Cadastrar Vaga");
 
-        jButton2.setText("Editar Vaga");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jBTNEditar.setText("Editar Vaga");
+        jBTNEditar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                jBTNEditarActionPerformed(evt);
             }
         });
 
-        jButton3.setText("Excluir Vaga");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        jBTNExcluir.setText("Excluir Vaga");
+        jBTNExcluir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                jBTNExcluirActionPerformed(evt);
             }
         });
 
@@ -100,11 +101,11 @@ public class JFListarvagas extends javax.swing.JFrame {
                 .addContainerGap())
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton1)
+                .addComponent(jBTNCadastrar)
                 .addGap(38, 38, 38)
-                .addComponent(jButton2)
+                .addComponent(jBTNEditar)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
-                .addComponent(jButton3)
+                .addComponent(jBTNExcluir)
                 .addGap(33, 33, 33))
         );
         layout.setVerticalGroup(
@@ -116,22 +117,33 @@ public class JFListarvagas extends javax.swing.JFrame {
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 233, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(jBTNExcluir)
+                    .addComponent(jBTNEditar)
+                    .addComponent(jBTNCadastrar))
                 .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void jBTNEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNEditarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_jBTNEditarActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton3ActionPerformed
+    private void jBTNExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNExcluirActionPerformed
+        if(jTVaga.getSelectedRow() != -1){
+            int opcao = JOptionPane.showConfirmDialog(null, "Deseja excluir a vaga selecionada?", "Exclusão", JOptionPane.YES_NO_OPTION);
+            if(opcao == 0){
+                VagaDAO dao = new VagaDAO();
+                Vaga v = new Vaga();
+                v.setIdVaga((int)jTVaga.getValueAt(jTVaga.getSelectedRow(), 0));
+                dao.delete(v);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "Selecione uma vaga", "Erro", JOptionPane.ERROR_MESSAGE);
+        }
+        readJTable();
+    }//GEN-LAST:event_jBTNExcluirActionPerformed
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         readJTable();
@@ -187,9 +199,9 @@ public class JFListarvagas extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jBTNCadastrar;
+    private javax.swing.JButton jBTNEditar;
+    private javax.swing.JButton jBTNExcluir;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTVaga;
