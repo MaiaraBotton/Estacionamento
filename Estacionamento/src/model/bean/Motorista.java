@@ -7,7 +7,7 @@ package model.bean;
 
 public class Motorista {
     private int IdMotorista;
-    private String nomeCompleto;
+    private String Nome;
     private int cpf;
     private boolean genero;
     private int rg;
@@ -23,12 +23,12 @@ public class Motorista {
         this.IdMotorista = IdMotorista;
     }
 
-    public String getNomeCompleto() {
-        return nomeCompleto;
+    public String getNome() {
+        return Nome;
     }
 
-    public void setNomeCompleto(String nomeCompleto) {
-        this.nomeCompleto = nomeCompleto;
+    public void setNome(String nome) {
+        this.Nome = nome;
     }
 
     public int getCpf() {

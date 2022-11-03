@@ -5,7 +5,7 @@
  */
 package view;
 import model.bean.Motorista;
-import model.dao.Motorista;
+import model.dao.MotoristaDAO;
 /**
  *
  * @author 05443632051
@@ -28,6 +28,7 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        BGGenero = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jTFCpf = new javax.swing.JTextField();
@@ -37,8 +38,8 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         jBtnLimpar = new javax.swing.JButton();
         jBtnSalvar = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jRadioButton1 = new javax.swing.JRadioButton();
-        jRadioButton2 = new javax.swing.JRadioButton();
+        jRBFeminino = new javax.swing.JRadioButton();
+        jRBMasculino = new javax.swing.JRadioButton();
         jLabel5 = new javax.swing.JLabel();
         jTFRg = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
@@ -79,17 +80,22 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         });
 
         jBtnSalvar.setText("Salvar");
-
-        jLabel4.setText("Gênero");
-
-        jRadioButton1.setText("Feminino");
-        jRadioButton1.addActionListener(new java.awt.event.ActionListener() {
+        jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRadioButton1ActionPerformed(evt);
+                jBtnSalvarActionPerformed(evt);
             }
         });
 
-        jRadioButton2.setText("Masculino");
+        jLabel4.setText("Gênero");
+
+        jRBFeminino.setText("Feminino");
+        jRBFeminino.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jRBFemininoActionPerformed(evt);
+            }
+        });
+
+        jRBMasculino.setText("Masculino");
 
         jLabel5.setText("Numero RG");
 
@@ -149,9 +155,9 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                             .addComponent(jTFRg, javax.swing.GroupLayout.Alignment.LEADING)))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jRadioButton1)
+                        .addComponent(jRBFeminino)
                         .addGap(18, 18, 18)
-                        .addComponent(jRadioButton2)))
+                        .addComponent(jRBMasculino)))
                 .addContainerGap(215, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -175,8 +181,8 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRadioButton1)
-                    .addComponent(jRadioButton2))
+                    .addComponent(jRBFeminino)
+                    .addComponent(jRBMasculino))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel6)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -208,13 +214,31 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
-    private void jRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRadioButton1ActionPerformed
+    private void jRBFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFemininoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton1ActionPerformed
+    }//GEN-LAST:event_jRBFemininoActionPerformed
 
     private void jTFNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFNomeActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTFNomeActionPerformed
+
+    private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
+        Motorista m = new Motorista();
+       MotoristaDAO dao = new MotoristaDAO ();
+       m.setNome(jTFNome.getText());
+       m.setCpf(Integer.parseInt(jTFCpf.getText()));
+       m.setRg(Integer.parseInt(jTFRg.getText()));
+       if(jRBFeminino.isSelected()){
+           m.setFeminino(true);
+       } else if (jRBMasculino.isSelected()) {
+           m.setMasculino(false);
+       }
+       m.setCelular(Integer.parseInt(jTFCelular.getText()));
+       m.setEmail(Integer.parseInt(jTFEmail.getText()));
+       m.setSenha(jTFSenha.getText());
+       dao.create(m);
+
+    }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -252,6 +276,7 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.ButtonGroup BGGenero;
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jBtnLimpar;
     private javax.swing.JButton jBtnSalvar;
@@ -263,8 +288,8 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRadioButton1;
-    private javax.swing.JRadioButton jRadioButton2;
+    private javax.swing.JRadioButton jRBFeminino;
+    private javax.swing.JRadioButton jRBMasculino;
     private javax.swing.JTextField jTFCelular;
     private javax.swing.JTextField jTFCpf;
     private javax.swing.JTextField jTFEmail;

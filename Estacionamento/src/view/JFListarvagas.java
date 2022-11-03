@@ -70,6 +70,11 @@ public class JFListarvagas extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTVaga);
 
         jBTNCadastrar.setText("Cadastrar Vaga");
+        jBTNCadastrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBTNCadastrarActionPerformed(evt);
+            }
+        });
 
         jBTNEditar.setText("Editar Vaga");
         jBTNEditar.addActionListener(new java.awt.event.ActionListener() {
@@ -148,6 +153,10 @@ public class JFListarvagas extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         readJTable();
     }//GEN-LAST:event_formWindowOpened
+
+    private void jBTNCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNCadastrarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBTNCadastrarActionPerformed
     public void readJTable(){
         DefaultTableModel modelo = (DefaultTableModel) jTVaga.getModel();
         modelo.setNumRows(0);
