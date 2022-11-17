@@ -1,82 +1,71 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package model.bean;
 
+
 public class Motorista {
-    private int IdMotorista;
-    private String Nome;
-    private int cpf;
-    private boolean genero;
+
+    private int idMotorista;
+    private String nome;
+    private String genero;
     private int rg;
+    private int cpf;
     private int celular;
-    private int email;
-    private int senha;
+    private boolean homem;
+    private String email;
+    private String senha;
 
     public int getIdMotorista() {
-        return IdMotorista;
+        return idMotorista;
     }
 
-    public void setIdMotorista(int IdMotorista) {
-        this.IdMotorista = IdMotorista;
+    public void setIdMotorista(int idMotorista) {
+        this.idMotorista = idMotorista;
     }
 
     public String getNome() {
-        return Nome;
+        return nome;
     }
-
     public void setNome(String nome) {
-        this.Nome = nome;
+        this.nome = nome;
     }
 
-    public int getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-        this.cpf = cpf;
-    }
-
-    public boolean getGenero() {
+    public String getGenero() {
         return genero;
+    public boolean isHomem() {
+        return homem;
     }
 
-    public void setGenero(boolean genero) {
+    public void setGenero(String genero) {
         this.genero = genero;
+    public void setHomem(boolean homem) {
+        this.homem = homem;
     }
 
     public int getRg() {
+    public String getRg() {
         return rg;
     }
 
     public void setRg(int rg) {
+    public void setRg(String rg) {
         this.rg = rg;
     }
 
+    public int getCpf() {
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(int cpf) {
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
+    }
+
     public int getCelular() {
+    public String getCelular() {
         return celular;
     }
 
     public void setCelular(int celular) {
+    public void setCelular(String celular) {
         this.celular = celular;
     }
-
-    public int getEmail() {
-        return email;
-    }
-
-    public void setEmail(int email) {
-        this.email = email;
-    }
-
-    public int getSenha() {
-        return senha;
-    }
-
-    public void setSenha(int senha) {
-        this.senha = senha;
-    }
-
-}

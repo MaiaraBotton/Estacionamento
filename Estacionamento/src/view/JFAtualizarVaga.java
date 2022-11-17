@@ -10,12 +10,12 @@ import model.dao.VagaDAO;
  *
  * @author 05443632051
  */
-public class JFAualizarVaga extends javax.swing.JFrame {
-
+public class JFAtualizarVaga extends javax.swing.JFrame {
+private static int idVaga;
     /**
      * Creates new form JFAualizarVaga
      */
-    public JFAualizarVaga(int idVaga) {
+    public JFAtualizarVaga(int idVaga) {
         initComponents();
         VagaDAO vdao = new VagaDAO();
         Vaga v = vdao.read(idVaga);
@@ -164,7 +164,16 @@ public class JFAualizarVaga extends javax.swing.JFrame {
     }//GEN-LAST:event_jRBParalelaActionPerformed
 
     private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
-        
+        Vaga v = new Vaga();
+        VagaDAO vdao = new VagaDAO();
+        v.setIdVaga(Integer.parseInt(lblIdVaga.getText()));
+        v.setNumero(Integer.parseInt(jTFNumero.getText()));
+        v.setRua(jTFRua.getText());
+        if (jRBObliqua.isSelected()){
+            v.setObliqua(true);
+        }else if (jRBParalela.isSelected()){
+            v.setObliqua(false);
+        }
     }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
@@ -184,20 +193,22 @@ public class JFAualizarVaga extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(JFAualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAtualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(JFAualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAtualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(JFAualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAtualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(JFAualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(JFAtualizarVaga.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new JFAualizarVaga().setVisible(true);
+                JFAtualizarVaga frame = new JFAtualizarVaga(idVaga);
+                frame.setVisible(true);
             }
         });
     }

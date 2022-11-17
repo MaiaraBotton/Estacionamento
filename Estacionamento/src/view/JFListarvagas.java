@@ -132,7 +132,14 @@ public class JFListarvagas extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jBTNEditarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNEditarActionPerformed
-        // TODO add your handling code here:
+        if(jTVaga.getSelectedRow()  != -1){
+            int vagaSelecionada = (int)jTVaga.getValueAt(jTVaga.getSelectedRow(),0);
+            JFAtualizarVaga av = new JFAtualizarVaga(vagaSelecionada);
+            av.setVisible(true);
+        } else{
+            JOptionPane.showMessageDialog(null, "Selecione uma vaga!", "Erro", JOptionPane.ERROR_MESSAGE);
+        } 
+       readJTable();
     }//GEN-LAST:event_jBTNEditarActionPerformed
 
     private void jBTNExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNExcluirActionPerformed
