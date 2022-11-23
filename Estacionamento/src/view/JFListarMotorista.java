@@ -5,6 +5,10 @@
  */
 package view;
 
+import javax.swing.JOptionPane;
+import model.bean.Motorista;
+import model.dao.MotoristaDAO;
+
 /**
  *
  * @author 05443632051
@@ -120,12 +124,12 @@ public class JFListarMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jBTNCancelarActionPerformed
 
     private void jBTNExcluirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNExcluirActionPerformed
-        if(jTMotorista.getSelectedRow() != -1){
+        if(jTable1.getSelectedRow() != -1){
             int opcao = JOptionPane.showConfirmDialog(null, "Deseja excluir a vaga selecionada?", "Exclusão", JOptionPane.YES_NO_OPTION);
             if(opcao == 0){
                 MotoristaDAO dao = new MotoristaDAO();
                 Motorista m = new Motorista();
-                m.setIdVaga((int)jTMotorista.getValueAt(jTMotorista.getSelectedRow(), 0));
+                m.setIdVaga((int)jTable1.getValueAt(jTable1.getSelectedRow(), 0));
                 dao.delete(m);
             }
         }else{
@@ -161,6 +165,9 @@ public class JFListarMotorista extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(JFListarMotorista.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -178,4 +185,8 @@ public class JFListarMotorista extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;
     // End of variables declaration//GEN-END:variables
+
+    private void readJTable() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 }

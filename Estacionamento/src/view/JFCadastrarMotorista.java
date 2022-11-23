@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 package view;
-import model.bean.Motorista;
+ import model.bean.Motorista;
 import model.dao.MotoristaDAO;
 /**
  *
@@ -28,54 +28,56 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        BGGenero = new javax.swing.ButtonGroup();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jTFCpf = new javax.swing.JTextField();
+        jTFNomeCompleto = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jTFNome = new javax.swing.JTextField();
-        jBtnCancelar = new javax.swing.JButton();
-        jBtnLimpar = new javax.swing.JButton();
-        jBtnSalvar = new javax.swing.JButton();
+        jTFRG = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jRBFeminino = new javax.swing.JRadioButton();
-        jRBMasculino = new javax.swing.JRadioButton();
+        jTFCPF = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
-        jTFRg = new javax.swing.JTextField();
-        jLabel6 = new javax.swing.JLabel();
         jTFCelular = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
         jTFEmail = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        jPFSenha = new javax.swing.JTextField();
+        jBtnSalvar = new javax.swing.JButton();
+        jBtnCancelar = new javax.swing.JButton();
+        jBtnLimpar = new javax.swing.JButton();
         jLabel8 = new javax.swing.JLabel();
-        jTFSenha = new javax.swing.JTextField();
+        jTFGenero = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 12)); // NOI18N
-        jLabel1.setText("Cadastrar motorista");
+        jLabel1.setText("Cadastrar Motorista");
 
-        jLabel2.setText("Número CPF");
+        jLabel2.setText("Número");
 
-        jTFCpf.addActionListener(new java.awt.event.ActionListener() {
+        jTFNomeCompleto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTFCpfActionPerformed(evt);
+                jTFNomeCompletoActionPerformed(evt);
             }
         });
 
-        jLabel3.setText("Nome Completo");
+        jLabel3.setText("RG");
 
-        jTFNome.addActionListener(new java.awt.event.ActionListener() {
+        jLabel4.setText("CPF");
+
+        jLabel5.setText("Celular");
+
+        jTFCelular.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTFNomeActionPerformed(evt);
+                jTFCelularActionPerformed(evt);
             }
         });
 
-        jBtnCancelar.setText("Cancelar");
+        jLabel6.setText("Email");
 
-        jBtnLimpar.setText("Limpar");
-        jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
+        jLabel7.setText("Senha");
+
+        jPFSenha.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jBtnLimparActionPerformed(evt);
+                jPFSenhaActionPerformed(evt);
             }
         });
 
@@ -86,24 +88,27 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
             }
         });
 
-        jLabel4.setText("Gênero");
-
-        jRBFeminino.setText("Feminino");
-        jRBFeminino.addActionListener(new java.awt.event.ActionListener() {
+        jBtnCancelar.setText("Cancelar");
+        jBtnCancelar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jRBFemininoActionPerformed(evt);
+                jBtnCancelarActionPerformed(evt);
             }
         });
 
-        jRBMasculino.setText("Masculino");
+        jBtnLimpar.setText("Limpar");
+        jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLimparActionPerformed(evt);
+            }
+        });
 
-        jLabel5.setText("Numero RG");
+        jLabel8.setText("Gênero");
 
-        jLabel6.setText("Celular");
-
-        jLabel7.setText("Email");
-
-        jLabel8.setText("Senha");
+        jTFGenero.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTFGeneroActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -112,133 +117,133 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(134, 134, 134)
+                        .addGap(145, 145, 145)
                         .addComponent(jLabel1))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel3))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(67, 67, 67)
-                        .addComponent(jBtnCancelar)
-                        .addGap(31, 31, 31)
-                        .addComponent(jBtnLimpar)
-                        .addGap(30, 30, 30)
-                        .addComponent(jBtnSalvar))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel2))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, 285, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel6))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel7))
-                    .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel8))
+                        .addComponent(jTFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, 257, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jTFSenha, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
-                            .addComponent(jTFEmail, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFCelular, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFCpf, javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTFRg, javax.swing.GroupLayout.Alignment.LEADING)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel5)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFCelular))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel4)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFCPF))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jTFRG, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel6)
+                                    .addComponent(jLabel7)
+                                    .addComponent(jLabel8))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jTFEmail)
+                                    .addComponent(jPFSenha)))))
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jRBFeminino)
-                        .addGap(18, 18, 18)
-                        .addComponent(jRBMasculino)))
-                .addContainerGap(215, Short.MAX_VALUE))
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jTFGenero, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                .addGap(32, 32, 32)
+                                .addComponent(jBtnSalvar)
+                                .addGap(34, 34, 34)
+                                .addComponent(jBtnCancelar)))
+                        .addGap(27, 27, 27)
+                        .addComponent(jBtnLimpar)))
+                .addContainerGap(99, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel1)
-                .addGap(3, 3, 3)
-                .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFNome, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFCpf, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFRg, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel4)
+                .addComponent(jTFNomeCompleto, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jRBFeminino)
-                    .addComponent(jRBMasculino))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
+                    .addComponent(jLabel3)
+                    .addComponent(jTFRG, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel4)
+                    .addComponent(jTFCPF, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(jTFCelular, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(jTFEmail, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(jPFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel8)
+                    .addComponent(jTFGenero, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jBtnSalvar)
                     .addComponent(jBtnCancelar)
-                    .addComponent(jBtnLimpar)
-                    .addComponent(jBtnSalvar))
-                .addGap(34, 34, 34))
+                    .addComponent(jBtnLimpar))
+                .addGap(21, 21, 21))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTFCpfActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCpfActionPerformed
+    private void jTFNomeCompletoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFNomeCompletoActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTFCpfActionPerformed
+    }//GEN-LAST:event_jTFNomeCompletoActionPerformed
+
+    private void jTFCelularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFCelularActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFCelularActionPerformed
+
+    private void jPFSenhaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jPFSenhaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jPFSenhaActionPerformed
+
+    private void jBtnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnCancelarActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
-    private void jRBFemininoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jRBFemininoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jRBFemininoActionPerformed
-
-    private void jTFNomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFNomeActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTFNomeActionPerformed
-
     private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed
         Motorista m = new Motorista();
-       MotoristaDAO dao = new MotoristaDAO ();
-       m.setNome(jTFNome.getText());
-       m.setCpf(Integer.parseInt(jTFCpf.getText()));
-       m.setRg(Integer.parseInt(jTFRg.getText()));
-       if(jRBFeminino.isSelected()){
-           m.setFeminino(true);
-       } else if (jRBMasculino.isSelected()) {
-           m.setMasculino(false);
-       }
-       m.setCelular(Integer.parseInt(jTFCelular.getText()));
-       m.setEmail(Integer.parseInt(jTFEmail.getText()));
-       m.setSenha(jTFSenha.getText());
-       dao.create(m);
+        MotoristaDAO dao = new MotoristaDAO();
+        m.setNomeCompleto(jTFNomeCompleto.getText());
+        m.setGenero(jTFGenero.getText());
+        m.setRG(Integer.parseInt(jTFRG.getText()));
+        m.setCPF(Integer.parseInt(jTFCPF.getText()));
+        m.setCelular(Integer.parseInt(jTFCelular.getText()));
+        m.setEmail(jTFEmail.getText());
+        m.setSenha(jPFSenha.getText());
 
+        dao.create(m);
     }//GEN-LAST:event_jBtnSalvarActionPerformed
+
+    private void jTFGeneroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTFGeneroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTFGeneroActionPerformed
 
     /**
      * @param args the command line arguments
@@ -276,7 +281,6 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.ButtonGroup BGGenero;
     private javax.swing.JButton jBtnCancelar;
     private javax.swing.JButton jBtnLimpar;
     private javax.swing.JButton jBtnSalvar;
@@ -288,13 +292,12 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
-    private javax.swing.JRadioButton jRBFeminino;
-    private javax.swing.JRadioButton jRBMasculino;
+    private javax.swing.JTextField jPFSenha;
+    private javax.swing.JTextField jTFCPF;
     private javax.swing.JTextField jTFCelular;
-    private javax.swing.JTextField jTFCpf;
     private javax.swing.JTextField jTFEmail;
-    private javax.swing.JTextField jTFNome;
-    private javax.swing.JTextField jTFRg;
-    private javax.swing.JTextField jTFSenha;
+    private javax.swing.JTextField jTFGenero;
+    private javax.swing.JTextField jTFNomeCompleto;
+    private javax.swing.JTextField jTFRG;
     // End of variables declaration//GEN-END:variables
 }

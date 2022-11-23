@@ -1,71 +1,92 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
 package model.bean;
 
-
+/**
+ *
+ * @author 05443632051
+ */
 public class Motorista {
-
     private int idMotorista;
-    private String nome;
+    private String nomeCompleto;
     private String genero;
-    private int rg;
-    private int cpf;
-    private int celular;
-    private boolean homem;
+    private int RG;
+    private int CPF;
+    private int celular ;
     private String email;
     private String senha;
+    
 
     public int getIdMotorista() {
         return idMotorista;
+    }
+
+    public String getNomeCompleto() {
+        return nomeCompleto;
+    }
+
+    public String getGenero() {
+        return genero;
+    }
+
+    public int getRG() {
+        return RG;
+    }
+
+    public int getCPF() {
+        return CPF;
+    }
+
+    public int getCelular() {
+        return celular;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getSenha() {
+        return senha;
     }
 
     public void setIdMotorista(int idMotorista) {
         this.idMotorista = idMotorista;
     }
 
-    public String getNome() {
-        return nome;
-    }
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getGenero() {
-        return genero;
-    public boolean isHomem() {
-        return homem;
+    public void setNomeCompleto(String nomeCompleto) {
+        this.nomeCompleto = nomeCompleto;
     }
 
     public void setGenero(String genero) {
         this.genero = genero;
-    public void setHomem(boolean homem) {
-        this.homem = homem;
     }
 
-    public int getRg() {
-    public String getRg() {
-        return rg;
+    public void setRG(int RG) {
+        this.RG = RG;
     }
 
-    public void setRg(int rg) {
-    public void setRg(String rg) {
-        this.rg = rg;
-    }
-
-    public int getCpf() {
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(int cpf) {
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
-    }
-
-    public int getCelular() {
-    public String getCelular() {
-        return celular;
+    public void setCPF(int CPF) {
+        this.CPF = CPF;
     }
 
     public void setCelular(int celular) {
-    public void setCelular(String celular) {
         this.celular = celular;
     }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void setSenha(String senha) {
+        this.senha = senha;
+    }
+
+    public void setIdVaga(int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    
+    
+}

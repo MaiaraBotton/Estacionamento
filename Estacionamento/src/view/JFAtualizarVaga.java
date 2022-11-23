@@ -174,6 +174,7 @@ private static int idVaga;
         }else if (jRBParalela.isSelected()){
             v.setObliqua(false);
         }
+        vdao.update(v);
     }//GEN-LAST:event_jBtnSalvarActionPerformed
 
     /**
