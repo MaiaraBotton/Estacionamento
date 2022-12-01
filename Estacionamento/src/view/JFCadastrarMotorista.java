@@ -224,7 +224,11 @@ public class JFCadastrarMotorista extends javax.swing.JFrame {
     }//GEN-LAST:event_jBtnCancelarActionPerformed
 
     private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
-        // TODO add your handling code here:
+        jTFNomeCompleto.setText("");
+        jTFCPF.setText("");
+        jTFGenero.setText("");
+        jTFEmail.setText("");
+        
     }//GEN-LAST:event_jBtnLimparActionPerformed
 
     private void jBtnSalvarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnSalvarActionPerformed

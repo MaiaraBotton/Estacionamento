@@ -39,6 +39,7 @@ public class JFListarvagas extends javax.swing.JFrame {
         jBTNExcluir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Listar vagas");
         addWindowListener(new java.awt.event.WindowAdapter() {
             public void windowOpened(java.awt.event.WindowEvent evt) {
                 formWindowOpened(evt);
@@ -162,7 +163,8 @@ public class JFListarvagas extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowOpened
 
     private void jBTNCadastrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTNCadastrarActionPerformed
-        // TODO add your handling code here:
+       JFCadastrarVaga cv = new JFCadastrarVaga();
+       cv.setVisible(true);
     }//GEN-LAST:event_jBTNCadastrarActionPerformed
     public void readJTable(){
         DefaultTableModel modelo = (DefaultTableModel) jTVaga.getModel();

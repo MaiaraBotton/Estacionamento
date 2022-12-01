@@ -87,6 +87,11 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         jBtnCancelar.setText("Cancelar");
 
         jBtnLimpar.setText("Limpar");
+        jBtnLimpar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBtnLimparActionPerformed(evt);
+            }
+        });
 
         jBtnSalvar.setText("Salvar");
         jBtnSalvar.addActionListener(new java.awt.event.ActionListener() {
@@ -208,6 +213,14 @@ public class JFAtualizarMotorista extends javax.swing.JFrame {
         jTFSenha.setText(String.valueOf(m.getSenha()));
         mdao.update(m);
     }//GEN-LAST:event_jBtnSalvarActionPerformed
+
+    private void jBtnLimparActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBtnLimparActionPerformed
+        jTFNomeCompleto.setText("");
+        jTFCPF.setText("");
+        jTFGenero.setText("");
+        jTFEmail.setText("");
+        jTFSenha.setText("");
+    }//GEN-LAST:event_jBtnLimparActionPerformed
 
     /**
      * @param args the command line arguments
